@@ -1,6 +1,7 @@
 import express from "express";
 import configViewEngine from "./configs/viewEngine";
 import initWebRouter from "./route/web";
+import connection from "./configs/connectDB";
 
 const app = express()
 const port = process.env.PORT || 8080;
