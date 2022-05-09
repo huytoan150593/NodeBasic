@@ -7,12 +7,5 @@ const connection = mysql.createConnection({
     database: "NodeJsBasic"
 })
 
-// simple query
-connection.query(
-    'SELECT * from users',
-    function (err, results, fields) {
-        console.log(results);
-    }
-)
 
 export default connection;

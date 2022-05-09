@@ -16,22 +16,29 @@
             <li><a href="#">ChallengeTrends</a></li>
         </ul>
     </div>
+    <h1>User List</h1>
     <table>
         <tr>
             <th>First Name</th>
             <th>Last Name</th>
-            <th>More</th>
+            <th>Action</th>
         </tr>
-        <tr>
-            <td>Alfreds Futterkiste</td>
-            <td>Maria Anders</td>
-            <td>Germany</td>
-        </tr>
-        <tr>
-            <td>Centro comercial Moctezuma</td>
-            <td>Francisco Chang</td>
-            <td>Mexico</td>
-        </tr>
+        <% for(let i=0; i<dataUsers.length; i++){ %>
+            <tr>
+                <td>
+                    <%= dataUsers[i].firstName %>
+                </td>
+                <td>
+                    <%= dataUsers[i].lastName %>
+                </td>
+                <td>
+                    <button>More</button>
+                    <button>Edit</button>
+                    <button>Delete</button>
+                </td>
+            </tr>
+            <% } %>
+
     </table>
 </body>
 
