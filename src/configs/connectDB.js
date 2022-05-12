@@ -1,11 +1,14 @@
-import mysql from "mysql2";
+import mysql from "mysql2/promise";
 
-// create the connection to database
-const connection = mysql.createConnection({
-    host: "localhost",
-    user: "root",
-    database: "NodeJsBasic"
-})
+// Create the connection pool. The pool-specific settings are the defaults
+
+console.log("Creating connection pool...")
+const pool = mysql.createPool({
+    host: 'localhost',
+    user: 'root',
+    database: 'NodeJsBasic',
+    // password: '1234'
+});
 
 
-export default connection;
+export default pool;
