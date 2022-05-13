@@ -38,8 +38,39 @@
                 </td>
             </tr>
             <% } %>
-
     </table>
+
+    <div class="form-wrapper">
+        <h1>Sample Form</h1>
+        <p>
+            For demonstrating the problem with hints below the fields.
+        </p>
+        <form action="/create-new-user" method="POST">
+            <p>
+                <label for=" firstName">First Name:</label><br>
+                <input type="text" name="firstName" aria-describedby="FNhint"><br>
+                <small id="FNhint">Please just one.</small>
+            </p>
+            <p>
+                <label for="lastName">Last Name:</label><br>
+                <input type="text" name="lastName" aria-describedby="LNhint"><br>
+                <small id="LNhint">Same deal.</small>
+            </p>
+            <p>
+                <label for="address">Address:</label><br>
+                <input type="text" name="address" aria-describedby="PNhint"><br>
+                <small class="error" id="PNhint">MISTAKE!.</small>
+            </p>
+            <p>
+                <label for="email">Email:</label><br>
+                <input type="email" name="email" aria-describedby="PNhint"><br>
+                <small class="error" id="PNhint">MISTAKE!.</small>
+            </p>
+            <p>
+                <button type="submit">SUBMIT</button>
+            </p>
+        </form>
+    </div>
 </body>
 
 </html>
