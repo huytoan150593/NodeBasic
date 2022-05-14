@@ -16,7 +16,7 @@
             <li><a href="#">ChallengeTrends</a></li>
         </ul>
     </div>
-    <h1>User List</h1>
+    <h1 style="padding: 20px 100px;">User List</h1>
     <table>
         <tr>
             <th>First Name</th>
@@ -33,7 +33,9 @@
                 </td>
                 <td>
                     <a href="/detail/users/<%= dataUsers[i].id%>" style="color:black">Details</a>
-                    <button>Edit</button>
+                    <form action="/edit-user/<%= dataUsers[i].id%>" method="GET">
+                        <button type="submit">Edit</button>
+                    </form>
                     <button>Delete</button>
                 </td>
             </tr>

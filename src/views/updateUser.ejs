@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit User</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="form-wrapper">
+        <h1>Sample Form</h1>
+        <p>
+            For demonstrating the problem with hints below the fields.
+        </p>
+        <form action="/update-user" method="POST">
+            <p>
+                <label for="firstName">First Name:</label><br>
+                <input type="text" name="firstName" value="<%= dataUsers.firstName%>" aria-describedby="FNhint"><br>
+                <small id="FNhint">Please just one.</small>
+            </p>
+            <p>
+                <label for="lastName">Last Name:</label><br>
+                <input type="text" name="lastName" value="<%= dataUsers.lastName%>" aria-describedby="LNhint"><br>
+                <small id="LNhint">Same deal.</small>
+            </p>
+            <p>
+                <label for="address">Address:</label><br>
+                <input type="text" name="address" value="<%= dataUsers.address%>" aria-describedby="PNhint"><br>
+                <small class="error" id="PNhint">MISTAKE!.</small>
+            </p>
+            <p>
+                <label for="email">Email:</label><br>
+                <input type="email" name="email" value="<%= dataUsers.email%>" aria-describedby="PNhint"><br>
+                <small class="error" id="PNhint">MISTAKE!.</small>
+            </p>
+            <p>
+                <input type="text" value="<%= dataUsers.id%>">
+            </p>
+            <p>
+                <button type="submit">SUBMIT</button>
+            </p>
+        </form>
+    </div>
+</body>
+
+</html>

@@ -35,7 +35,8 @@ a {
 table {
     border-collapse: collapse;
     width: 100%;
-    border: 1px solid black
+    border: 1px solid black;
+    margin: 0px 100px;
 }
 
 th,
@@ -51,9 +52,10 @@ tr:hover {
 
 .form-wrapper {
     display: block;
+    text-align: center;
     box-sizing: border-box;
     width: 90%;
-    margin: 1em auto;
+    margin: 3em auto;
     padding: 1em 2em;
     color: #000;
     background-color: rgba(204, 204, 204, .9);
