@@ -36,7 +36,10 @@
                     <form action="/edit-user/<%= dataUsers[i].id%>" method="GET">
                         <button type="submit">Edit</button>
                     </form>
-                    <button>Delete</button>
+                    <form action="/delete-user" method="POST">
+                        <input type="text" value="<%= dataUsers[i].id %>" name="userId">
+                        <button type="submit">Delete</button>
+                    </form>
                 </td>
             </tr>
             <% } %>

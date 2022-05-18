@@ -20,23 +20,33 @@ let createUser = async (req, res) => {
     return res.redirect('/')
 }
 
-let showInfo = async (req, res) => {
-    let userId = req.params.id;
-    let [user, fields] = await pool.execute('SELECT * FROM users WHERE id = ?', [userId])
-    return res.render('updateUser.ejs', { dataUsers: user[0] })
+// let showInfo = async (req, res) => {
+//     let userId = req.params.id;
+//     let [user, fields] = await pool.execute('SELECT * FROM users WHERE id = ?', [userId])
+//     console.log("check data: ", user[0])
+//     return res.render('update.ejs', { dataUsers: user[0] })
+// }
+
+// let updateUser = async (req, res) => {
+//     let { firstName, lastName, address, email, id } = req.body
+//     await pool.execute('UPDATE users SET firstName = ?, lastName = ?, address = ?, email = ? WHERE id = ?',
+//         [firstName, lastName, address, email, id])
+//     console.log(req.body)
+//     res.send("hello update")
+// }
+
+let deleteUser = async (req, res) => {
+    let userId = req.body.userId
+    await pool.execute('DELETE FROM users WHERE id = ?', [userId])
+    return res.redirect('/')
 }
 
-let updateUser = async (req, res) => {
-    let { firstName, lastName, address, email, id } = req.body
-    await pool.execute('UPDATE users SET firstName = ?, lastName = ?, address = ?, email = ? WHERE id = ?',
-        [firstName, lastName, address, email, id])
-    console.log(req.body)
-    res.send("hello update")
-}
+
 module.exports = {
     getHomePage,
     getUserPage,
     createUser,
-    showInfo,
-    updateUser
+    // showInfo,
+    // updateUser,
+    deleteUser
 }

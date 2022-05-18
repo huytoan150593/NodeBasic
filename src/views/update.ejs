@@ -18,26 +18,26 @@
         <form action="/update-user" method="POST">
             <p>
                 <label for="firstName">First Name:</label><br>
-                <input type="text" name="firstName" value="<%= dataUsers.firstName%>" aria-describedby="FNhint"><br>
+                <input type="text" name="firstName" value="<%= dataUsers.firstName %>" aria-describedby="FNhint"><br>
                 <small id="FNhint">Please just one.</small>
             </p>
             <p>
                 <label for="lastName">Last Name:</label><br>
-                <input type="text" name="lastName" value="<%= dataUsers.lastName%>" aria-describedby="LNhint"><br>
+                <input type="text" name="lastName" value="<%= dataUsers.lastName %>" aria-describedby="LNhint"><br>
                 <small id="LNhint">Same deal.</small>
             </p>
             <p>
                 <label for="address">Address:</label><br>
-                <input type="text" name="address" value="<%= dataUsers.address%>" aria-describedby="PNhint"><br>
+                <input type="text" name="address" value="<%= dataUsers.address %>" aria-describedby="PNhint"><br>
                 <small class="error" id="PNhint">MISTAKE!.</small>
             </p>
             <p>
                 <label for="email">Email:</label><br>
-                <input type="email" name="email" value="<%= dataUsers.email%>" aria-describedby="PNhint"><br>
+                <input type="email" name="email" value="<%= dataUsers.email %>" aria-describedby="PNhint"><br>
                 <small class="error" id="PNhint">MISTAKE!.</small>
             </p>
             <p>
-                <input type="text" value="<%= dataUsers.id%>">
+                <input type="text" value="<%= dataUsers.id %>">
             </p>
             <p>
                 <button type="submit">SUBMIT</button>
